@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "bca14c2a-729e-4d0d-add4-1da315ff4c5a",
+		"name": "Day 15: Submit for badge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28176358"
+	},
+	"item": [
+		{
+			"name": "submit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://f31f511d-6271-4a4e-bed9-401024772591.mock.pstmn.io/submit",
+					"protocol": "https",
+					"host": [
+						"f31f511d-6271-4a4e-bed9-401024772591",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"submit"
+					]
+				},
+				"description": "Find the `secret` environment. Select it as the active environment, and **Send** this request for more instructions."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

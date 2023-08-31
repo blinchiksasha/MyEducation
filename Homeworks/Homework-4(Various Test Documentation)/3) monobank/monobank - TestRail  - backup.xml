@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S2</id>
+	<name>monobank</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>Key functionality</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C11</id>
+				<title>Money transfer to another monobank card via phone number</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>iPhone monobank app installed. 
+User is registered and has credit card with some money.</preconds>
+										<steps_separated><step>
+<index>1</index><content>Launch monobank application.</content><expected>Application home screen is displayed.</expected></step>
+<step>
+<index>2</index><content>Click &quot;Send to card&quot; button. </content><expected>A list of user&apos;s contacts is displayed. </expected></step>
+<step>
+<index>3</index><content>Search another monobank user by cell phone number.</content><expected>While entering number users start filtering till the necessary user is displayed. </expected></step>
+<step>
+<index>4</index><content>Click on the preferred user to send money to. </content><expected>Money transfer screen is displayed. 
+</expected></step>
+<step>
+<index>5</index><content>Verify all necessary fields are present:
+- contact name with &quot;mono&quot; label below
+- you current card balance
+- amount of money to transfer
+- transaction commission  
+- comment section
+- &quot;send&quot; button (inactive if the amount is set to &quot;0&quot;)
+- numeric keyboard activated
+
+</content><expected>All fields and elements are present.</expected></step>
+<step>
+<index>6</index><content>Enter valid money amount to transfer: 1 uah</content><expected>Message &quot;1 UAH&quot; displayed in the center. 
+The commission below indicates &quot;0 UAH&quot;. </expected></step>
+<step>
+<index>7</index><content>Enter any comment: &quot;test1&quot;</content><expected>Comment displayed on the screen.</expected></step>
+<step>
+<index>8</index><content>Click &quot;Send&quot; button. </content><expected>Screen displays successful transaction message with following options: 
+
+- &quot;Done&quot; button
+- &quot;Cancel transaction&quot; </expected></step>
+<step>
+<index>9</index><content>Click &quot;Cancel transaction&quot; button. </content><expected>Transaction is canceled and app returned to the previous screen - Money transfer, which already contains entered previously contact and data.  </expected></step>
+<step>
+<index>10</index><content>Click &quot;Send&quot; button. </content><expected>Screen displays successful transaction message with following options: 
+
+- &quot;Done&quot; button
+- &quot;Cancel transaction&quot; </expected></step>
+<step>
+<index>11</index><content>Click &quot;Done&quot; button. </content><expected>Transaction screen closed, app returns to main home screen.
+1 UAH  successfully deducted from the current user card.
+1 UAH successfully received  by corresponding user card.
+Corresponding user received &quot;Comment&quot; in his monobank app.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C12</id>
+				<title>Invite friends by sharing via social media (Viber)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>iPhone monobank app installed. 
+User is registered and has credit card with some money.</preconds>
+										<steps_separated><step>
+<index>1</index><content>Launch monobank application.</content><expected>Application home screen is displayed.</expected></step>
+<step>
+<index>2</index><content>Click &quot;More or ::&quot; button in the bottom right corner. </content><expected>A list of other app options is displayed. </expected></step>
+<step>
+<index>3</index><content>Click &quot;Invite friends&quot; button.</content><expected>Invite screen is displayed with the following data: 
+- cashback count
+- max cashback possible
+- number of contacts with cashback rate per invite
+- unique link with a &quot;copy&quot; over the click function
+- social networks selector
+- &quot;invite from phonebook&quot; button
+
+
+
+
+ </expected></step>
+<step>
+<index>4</index><content>Click on the link. </content><expected>Link is copied to the clipboard. 
+</expected></step>
+<step>
+<index>5</index><content>Click on the preferred social media to share with: Viber </content><expected>Viber app is opened and displays the list of users contacts.</expected></step>
+<step>
+<index>6</index><content>Choose a contact to share with from the Viber contacts list.</content><expected>Contact is selected with the checkmark.</expected></step>
+<step>
+<index>7</index><content>Click &quot;Send&quot; button. </content><expected>Message sent to the preferred contact.
+Monobank app keeps &quot;Invite&quot; screen active. </expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C13</id>
+				<title>Mobile phone balance replenishment</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>iPhone monobank app installed. 
+User is registered and has credit card with some money.</preconds>
+										<steps_separated><step>
+<index>1</index><content>Launch monobank application.</content><expected>Application home screen is displayed.</expected></step>
+<step>
+<index>2</index><content>Click &quot;Other payments&quot; button on the right side of screen.</content><expected>A list of other app options is displayed.</expected></step>
+<step>
+<index>3</index><content>Click &quot;Mobile phone replenishment&quot; button.</content><expected>Screen displays: 
+1) my number
+2) the list of users contacts from phonebook</expected></step>
+<step>
+<index>4</index><content>Click on the preferred contact to send money to. </content><expected>Money transfer screen is displayed with following elements: 
+- contact name with his phone number
+- you current card balance
+- amount of money to transfer
+- transaction commission  
+- &quot;send&quot; button (inactive if the amount is set to &quot;0&quot;)
+- numeric keyboard activated
+
+</expected></step>
+<step>
+<index>5</index><content>Enter valid money amount to transfer: 1 uah</content><expected>Message &quot;1 UAH&quot; displayed in the center. 
+The commission below indicates &quot;0 UAH&quot;. </expected></step>
+<step>
+<index>6</index><content>Click &quot;Send&quot; button. </content><expected>Screen displays successful transaction message.
+
+
+1 UAH  successfully deducted from the current user card.
+1 UAH successfully received  by mobile phone balance.
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C14</id>
+				<title>Money transfer via IBAN with invalid data (empty input)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>iPhone monobank app installed. 
+User is registered and has credit card with some money.</preconds>
+										<steps_separated><step>
+<index>1</index><content>Launch monobank application.</content><expected>Application home screen is displayed.</expected></step>
+<step>
+<index>2</index><content>Click &quot;Other paymets&quot; button. </content><expected>A list of other options is displayed. </expected></step>
+<step>
+<index>3</index><content>Click &quot;Pay via IBAN&quot;.</content><expected>A list of recent IBAN payments displayed (if any). 
+Input line is displayed. </expected></step>
+<step>
+<index>4</index><content>Enter valid IBAN: UA643223130000026001150092566</content><expected>The proposed recipients list is displayed, having found a recipient - &quot;Security Police&quot;.</expected></step>
+<step>
+<index>5</index><content>Click &quot;Security Police&quot; service in the proposed recipients list.
+</content><expected>Further recipient options displayed: 
+- option1
+- option2
+- option3</expected></step>
+<step>
+<index>6</index><content>Choose radio button with &quot;Option1 - flat security&quot;.</content><expected></expected></step>
+<step>
+<index>7</index><content>Click &quot;Next&quot; button.</content><expected>A list of different regions is displayed.</expected></step>
+<step>
+<index>8</index><content>Select random region from the list.</content><expected></expected></step>
+<step>
+<index>9</index><content>Click &quot;Next&quot; button.</content><expected>Screen with the following input fields is displayed: 
+- name
+- address
+- contract #
+- period
+- payment amount </expected></step>
+<step>
+<index>10</index><content>Click &quot;Send&quot; button. </content><expected>Error messages displayed under each empty input field.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C15</id>
+				<title>Mobile phone balance replenishment with invalid data (insufficient money balance)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>iPhone monobank app installed. 
+User is registered and has credit card with some money.</preconds>
+										<steps_separated><step>
+<index>1</index><content>Launch monobank application.</content><expected>Application home screen is displayed.</expected></step>
+<step>
+<index>2</index><content>Click &quot;Other payments&quot; button on the right side of screen.</content><expected>A list of other app options is displayed.</expected></step>
+<step>
+<index>3</index><content>Click &quot;Mobile phone replenishment&quot; button.</content><expected>Screen displays: 
+1) my number
+2) the list of users contacts from phonebook</expected></step>
+<step>
+<index>4</index><content>Click on the preferred contact to send money to. </content><expected>Money transfer screen is displayed with following elements: 
+- contact name with his phone number
+- you current card balance
+- amount of money to transfer
+- transaction commission  
+- &quot;send&quot; button (inactive if the amount is set to &quot;0&quot;)
+- numeric keyboard activated
+
+</expected></step>
+<step>
+<index>5</index><content>Enter invalid money amount to transfer: 99999999999999 uah</content><expected>Error message displayed - &quot;Insufficient amount on card&quot;.
+&quot;Send&quot; button remains inactive.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C16</id>
+				<title>Add comment to the transaction with invalid data (over limit comment length)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>iPhone monobank app installed. 
+User is registered and has credit card with some money.</preconds>
+										<steps_separated><step>
+<index>1</index><content>Launch monobank application.</content><expected>Application home screen is displayed.</expected></step>
+<step>
+<index>2</index><content>Click any recent transaction.</content><expected>Transaction details screen is opened.</expected></step>
+<step>
+<index>3</index><content>Click &quot;Description and tags&quot; field.</content><expected>Input area opens. </expected></step>
+<step>
+<index>4</index><content>Copy to clipboard large text outside of the app (1000 symbols): 
+
+
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</content><expected>Text copied to clipboard.
+
+</expected></step>
+<step>
+<index>5</index><content>Return to app &quot;Input&quot; and paste the copied text.</content><expected>Paste function doesn&apos;t work and input field stays empty. </expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+</suite>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S1</id>
+	<name>rozetka.com.ua</name>
+	<description>Функція реєстрації має деякі зміни на веб-застосунку https://rozetka.com.ua/. Розробник з вашої команди зазначив, що це може вплинути на логін, функції відновлення пароля і потенційно пов’язані модулі.
+
+Напишіть мінімум 5, максимум 10 тест-кейсів для регресійного тестування з поясненням чому саме ці секції ви обрали для тестування. Протестуйте веб-застосунок використовуючи ваші тест-кейси і оформіть баги у баг-репорти (якщо знайдете).* Пояснення для тест-кейсів можуть бути оформлені в окремому документі.</description>
+	<sections>
+		<section>
+		<name>Registration &amp; Login</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C1</id>
+				<title>Registration of new user via email &amp; phone with valid credentials</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Main page opened. 
+User is not logged in. </preconds>
+										<steps_separated><step>
+<index>1</index><content>Click &quot;human&quot; icon on the right side of header.</content><expected>Modal window opens with &quot;Login&quot; title.</expected></step>
+<step>
+<index>2</index><content>Click &quot;Register&quot; link in the bottom left corner.</content><expected>&quot;Registration&quot; modal window opens.</expected></step>
+<step>
+<index>3</index><content>Verify that all necessary fields are present: 
+- first name
+- last name
+- phone
+- email
+- password
+- Facebook button
+- Google button
+- legal notice
+
+
+Expected Result:
+All items are present. </content></step>
+<step>
+<index>4</index><content>Enter valid credentials: 
+
+name: Тест
+last name: Тестик
+phone: +38 066 666 66 67
+email: wakivih200@naymedia.com
+password: 12345A
+
+</content><expected>Modal window &quot;Mobile phone confirmation&quot; opens. 
+SMS with a code is sent to mobile phone for verification. </expected></step>
+<step>
+<index>5</index><content>Enter code from SMS and click &quot;Confirm&quot; button. </content><expected>Successful confirmation message appears and user is created. 
+Modal window &quot;Login&quot; opened.  </expected></step>
+<step>
+<index>6</index><content>Verify that user has been created in the database. </content><expected>New user is created. </expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C2</id>
+				<title>Registration of new user using Google OAuth</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Main page opened.
+User is not logged in.</preconds>
+										<steps_separated><step>
+<index>1</index><content>Click &quot;burger menu&quot; on the left side of header.</content><expected>Menu opened with Authorization block on top.</expected></step>
+<step>
+<index>2</index><content>Click &quot;Register&quot; link in the bottom left corner.</content><expected>&quot;Registration&quot; modal window opens.</expected></step>
+<step>
+<index>3</index><content>Verify that all necessary fields are present:
+
+first name
+last name
+phone
+email
+password
+Facebook button
+Google button
+legal notice</content><expected>All items are present.</expected></step>
+<step>
+<index>4</index><content>	
+Under &quot;Enter as user&quot; message click &quot;Google&quot;.</content><expected>Google login window opens. </expected></step>
+<step>
+<index>5</index><content>Enter valid Google credentials (or choose existing Google account from the list). </content><expected>Successful confirmation message appears and user is created. 
+</expected></step>
+<step>
+<index>6</index><content>Verify that user has been created in the database.</content><expected>New user is created.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C3</id>
+				<title>Registration of new user using Facebook login</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Main page opened.
+User is not logged in.</preconds>
+										<steps_separated><step>
+<index>1</index><content>Click &quot;burger menu&quot; on the left side of header.</content><expected>Menu opened with Authorization block on top.</expected></step>
+<step>
+<index>2</index><content>Click &quot;Register&quot; link in the bottom left corner.</content><expected>&quot;Registration&quot; modal window opens.</expected></step>
+<step>
+<index>3</index><content>Verify that all necessary fields are present:
+
+first name
+last name
+phone
+email
+password
+Facebook button
+Google button
+legal notice</content><expected>All items are present.</expected></step>
+<step>
+<index>4</index><content>	
+Under &quot;Enter as user&quot; message click &quot;Facebook&quot;.</content><expected>Facebook login window opens. </expected></step>
+<step>
+<index>5</index><content>Enter valid Facebook credentials (or choose existing Facebook account). </content><expected>Successful confirmation message appears and user is created. 
+</expected></step>
+<step>
+<index>6</index><content>Verify that user has been created in the database.</content><expected>New user is created.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C4</id>
+				<title>Login via email with valid credentials</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Main page opened. 
+User is already registered but not logged in. </preconds>
+										<steps_separated><step>
+<index>1</index><content>Click &quot;human&quot; icon on the right side of header.</content><expected>Modal window opens with &quot;Login&quot; title.</expected></step>
+<step>
+<index>2</index><content>Enter valid email: wakivih200@naymedia.com
+</content><expected>Email field is not displaying error message. </expected></step>
+<step>
+<index>3</index><content>Enter valid password: 12345A</content><expected>Password entered. </expected></step>
+<step>
+<index>4</index><content>Click &quot;Eye&quot; icon near the password field. </content><expected>Password is displayed unencripted. </expected></step>
+<step>
+<index>5</index><content>Click &quot;Login&quot; button.
+</content><expected>User is logged in. &quot;human&quot; icon in the header changed to &quot;list&quot; icon. </expected></step>
+<step>
+<index>6</index><content>Click on the &quot;list&quot; icon in the header. </content><expected>Registered user cabinet is opened. </expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C5</id>
+				<title>Login via phone number with valid credentials</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Main page opened. 
+User is already registered but not logged in. </preconds>
+										<steps_separated><step>
+<index>1</index><content>Click &quot;Burger menu&quot; icon on the right side of header.</content><expected>Menu window opens with &quot;Login&quot; block on top.</expected></step>
+<step>
+<index>2</index><content>Click &quot;Login&quot;. </content><expected>Modal window &quot;Login&quot; opens.</expected></step>
+<step>
+<index>3</index><content>Enter valid phone number: +38 066 666 66 67
+</content><expected>Phone number field is not displaying error message. </expected></step>
+<step>
+<index>4</index><content>Enter valid password: 12345A</content><expected>Password entered. </expected></step>
+<step>
+<index>5</index><content>Click &quot;Eye&quot; icon near the password field. </content><expected>Password is displayed unencripted. </expected></step>
+<step>
+<index>6</index><content>Click &quot;Login&quot; button.
+</content><expected>User is logged in. &quot;human&quot; icon in the header changed to &quot;list&quot; icon. </expected></step>
+<step>
+<index>7</index><content>Click on the &quot;list&quot; icon in the header. </content><expected>Registered user cabinet is opened. </expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C6</id>
+				<title>Login via Google OAuth</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Main page opened. 
+User is already registered but not logged in. </preconds>
+										<steps_separated><step>
+<index>1</index><content>Click &quot;human&quot; icon on the right side of header.</content><expected>Modal window opens with &quot;Login&quot; title.</expected></step>
+<step>
+<index>2</index><content>Under &quot;Enter as user&quot; message click &quot;Google&quot;.</content><expected>Google login window opens.</expected></step>
+<step>
+<index>3</index><content>Enter valid Google credentials (or choose existing Google account from the list).
+</content><expected>Successful confirmation message appears and user is logged in.
+&quot;Human&quot; icon in the header changed to &quot;list&quot; icon. 
+</expected></step>
+<step>
+<index>4</index><content>Click on the &quot;list&quot; icon in the header. </content><expected>Registered user cabinet is opened. </expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C7</id>
+				<title>Login via Facebook</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Main page opened. 
+User is already registered but not logged in. </preconds>
+										<steps_separated><step>
+<index>1</index><content>Click &quot;Burger menu&quot; icon on the right side of header.</content><expected>Menu window opens with &quot;Login&quot; block on top.</expected></step>
+<step>
+<index>2</index><content>Click &quot;Login&quot;. </content><expected>Modal window &quot;Login&quot; opens.</expected></step>
+<step>
+<index>3</index><content>Under &quot;Enter as user&quot; message click &quot;Facebook&quot;.</content><expected>Facebook login window opens.</expected></step>
+<step>
+<index>4</index><content>Enter valid Facebook credentials (or choose existing Facebook account).
+</content><expected>Successful confirmation message appears and user is logged in.
+&quot;Human&quot; icon in the header changed to &quot;list&quot; icon.</expected></step>
+<step>
+<index>5</index><content>Click on the &quot;list&quot; icon in the header. </content><expected>Registered user cabinet is opened. </expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C8</id>
+				<title>Password restore via valid email</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Main page opened.
+User is already registered but not logged in.</preconds>
+										<steps_separated><step>
+<index>1</index><content>Click &quot;human&quot; icon on the right side of header.</content><expected>Modal window opens with &quot;Login&quot; title.</expected></step>
+<step>
+<index>2</index><content>Click &quot;Remind my password&quot; text above the &quot;Login&quot; button. </content><expected>Window changed and password field disappeared.  </expected></step>
+<step>
+<index>3</index><content>Enter valid email: wakivih200@naymedia.com</content><expected>Email field doesn&apos;t display errors. </expected></step>
+<step>
+<index>4</index><content>Click &quot;Receive temporary password&quot; button. </content><expected>Temporary password is sent to user&apos;s email.
+Modal window with &quot;password&quot; field is opened.</expected></step>
+<step>
+<index>5</index><content>Enter received password and click &quot;Login&quot;.</content><expected>User is logged in to his profile.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C9</id>
+				<title>Password restore via valid phone number</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Main page opened.
+User is already registered but not logged in.</preconds>
+										<steps_separated><step>
+<index>1</index><content>Click &quot;human&quot; icon on the right side of header.</content><expected>Modal window opens with &quot;Login&quot; title.</expected></step>
+<step>
+<index>2</index><content>Click &quot;Remind my password&quot; text above the &quot;Login&quot; button. </content><expected>Window changed and password field disappeared.  </expected></step>
+<step>
+<index>3</index><content>Enter valid phone number: +38 066 666 66 67</content><expected>Phone number field doesn&apos;t display errors. </expected></step>
+<step>
+<index>4</index><content>Click &quot;Receive temporary password&quot; button. </content><expected>Temporary password is sent to user&apos;s phone number via SMS.
+Modal window with &quot;password&quot; field is opened.</expected></step>
+<step>
+<index>5</index><content>Enter received password and click &quot;Login&quot;.</content><expected>User is logged in to his profile.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C10</id>
+				<title>Registration of new user via email &amp; phone with invalid credentials (empty fields)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Main page opened. 
+User is not logged in. </preconds>
+										<steps_separated><step>
+<index>1</index><content>Click &quot;human&quot; icon on the right side of header.</content><expected>Modal window opens with &quot;Login&quot; title.</expected></step>
+<step>
+<index>2</index><content>Click &quot;Register&quot; link in the bottom left corner.</content><expected>&quot;Registration&quot; modal window opens.</expected></step>
+<step>
+<index>3</index><content>Verify that all necessary fields are present: 
+- first name
+- last name
+- phone
+- email
+- password
+- Facebook button
+- Google button
+- legal notice
+
+
+Expected Result:
+All items are present. </content></step>
+<step>
+<index>4</index><content>Click &quot;Confirm&quot; button. </content><expected>Error messages appear around every field asking to enter necessary data. 
+User is not created.  </expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+</suite>

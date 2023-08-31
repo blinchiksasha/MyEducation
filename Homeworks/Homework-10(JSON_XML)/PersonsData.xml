@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persons_data>
+    <user1>
+        <id>1</id>
+        <name>Arnold Schwarzeneger</name>
+        <city>Los Angeles</city>
+        <address>
+            <street>Lincoln street</street>
+            <house>134</house>
+            <appartment>17</appartment>
+        </address>
+        <contacts>
+            <pnone_numbers>12345678910, 19876543210</pnone_numbers>
+            <email>arni@gmail.com</email>
+            <skype>@arnold123</skype>
+        </contacts>
+    </user1>
+    <user2>
+        <id>2</id>
+        <name>Brad Pitt</name>
+        <city>Miami</city>
+        <address>
+            <street>34th street</street>
+            <house>22</house>
+            <appartment>1</appartment>
+        </address>
+        <contacts>
+            <pnone_numbers>12345678910, 19876543210</pnone_numbers>
+            <email>brad@gmail.com</email>
+            <skype>@pitt</skype>
+        </contacts>
+    </user2>
+    <user3>
+        <id>3</id>
+        <name>Matt Damon</name>
+        <city>New York</city>
+        <address>
+            <street>Empire street</street>
+            <house>1</house>
+            <appartment>33</appartment>
+        </address>
+        <contacts>
+            <pnone_numbers>12345678910, 19876543210</pnone_numbers>
+            <email>matt@gmail.com</email>
+            <skype>@damonhunter</skype>
+        </contacts>
+    </user3>
+    <user4>
+        <id>4</id>
+        <name>Chuck Norris</name>
+        <city>Huston</city>
+        <address>
+            <street>Sherif street</street>
+            <house>35</house>
+            <appartment>null</appartment>
+        </address>
+        <contacts>
+            <pnone_numbers>12345678910, 19876543210</pnone_numbers>
+            <email>chuck@gmail.com</email>
+            <skype>@killthemall</skype>
+        </contacts>
+    </user4>
+    
+</persons_data>

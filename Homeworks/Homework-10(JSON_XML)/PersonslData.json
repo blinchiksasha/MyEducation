@@ -1,0 +1,62 @@
+[
+    {
+    "id": 1,
+    "name": "Arnold Schwarzeneger", 
+    "city": "Los Angeles",
+    "address": {
+        "street": "Lincoln street",
+        "house": 134,
+        "appartment": 17
+    },
+    "contacts": {
+        "pnone_numbers": ["12345678910", "19876543210"],
+        "email": "arni@gmail.com",
+        "skype":  "@arnold123"
+    }
+},
+{
+    "id": 2,
+    "name": "Brad Pitt", 
+    "city": "Miami",
+    "address": {
+        "street": "34th street",
+        "house": 22,
+        "appartment": 1
+    },
+    "contacts": {
+        "pnone_numbers": ["1445345346910", "19547574570"],
+        "email": "brad@gmail.com",
+        "skype":  "@pitt"
+    }
+},
+{
+    "id": 3,
+    "name": "Matt Damon", 
+    "city": "New York",
+    "address": {
+        "street": "Empire street",
+        "house": 1,
+        "appartment": 33
+    },
+    "contacts": {
+        "pnone_numbers": ["9667548910", "1945673210"],
+        "email": "matt@gmail.com",
+        "skype":  "@damonhunter"
+    }
+},
+{
+    "id": 4,
+    "name": "Chuck Norris", 
+    "city": "Huston",
+    "address": {
+        "street": "Sherif street",
+        "house": 35,
+        "appartment": null
+    },
+    "contacts": {
+        "pnone_numbers": ["154467892322", "1345969750"],
+        "email": "chuck@gmail.com",
+        "skype":  "@killthemall"
+    }
+}
+]

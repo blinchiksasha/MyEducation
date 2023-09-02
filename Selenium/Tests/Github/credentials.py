@@ -1,0 +1,5 @@
+user_email = 'alex.blinchik@proton.me'
+user_password = 'TestTestTest1234!'
+nickname = 'alexblinchik'
+repo_name = 'selenium-test-repository'
+repo_description = 'This is my test repo for Selenium automation'

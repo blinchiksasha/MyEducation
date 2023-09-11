@@ -48,13 +48,9 @@ def create_repo():
     #browser.find_element(By.XPATH, '//*[@id=":rg:"]').click()
     #submit
     browser.find_element(By.XPATH, '/html/body/div[1]/div[6]/main/react-app/div/form/div[5]/button/span').click()
+    sleep(2)
 
-
-#define assertions
-def assertions(): 
-    check_repo_name = browser.find_element(By.CLASS_NAME, 'AppHeader-context-item')
-    assert(check_repo_name.text == repo_name)
-
+#save the name of created repo
 
 #define delete process
 def delete_repo(): 
@@ -67,12 +63,25 @@ def delete_repo():
     browser.find_element(By.ID, 'repo-delete-proceed-button').click()
 
 
-#execute sign in process
+#logout
+def logout(): 
+    browser.implicitly_wait(10)
+    # open user modal menu
+    browser.find_element(By.CLASS_NAME, 'AppHeader-user').click()
+    browser.find_element(By.LINK_TEXT, 'Sign out').click()
+    browser.find_element(By.XPATH, '/html/body/div[1]/div[6]/main/div/form/input[2]').click()
+
+
+
 sign_in()
-#execute creation process
+
 create_repo()
-#execute detele process
+check_repo_name = browser.find_element(By.XPATH, '//*[@id="repository-container-header"]/div[1]/div[1]/div[1]/strong/a').text
+assert(check_repo_name == repo_name)
+
 delete_repo()
+
+#logout()
 
 sleep(10)
 browser.quit()
